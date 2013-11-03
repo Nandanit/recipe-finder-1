@@ -177,13 +177,18 @@ try {
                       ->forRecipes($argv[2])
                       ->find();
     echo "\n\n";
+
 } catch (RecipeFinderException $e) {
+
     echo $e->getMessage() . "\n";
+
 } catch (RecipeFinderInputException $e) {
+
     /* Input error, display message */
     echo "Valid input required.\n\n";
     echo "Usage:\n";
     echo "php " . __FILE__ . " <fridge csv> <recipes json>\n\n";
     echo "Fridge.csv must be in the following format:\n";
     echo "item, amount, unit, use-by\n\n";
+
 }
